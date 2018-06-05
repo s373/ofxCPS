@@ -5,11 +5,11 @@ Utility program to display Clicks per Second count \<ClicksPerSecond> and addon 
 ```
 App to display Clicks Per Second.
 
-Your fingers are being strained while you play stupid / stolen games.
+Your fingers are being strained while you play physically demanding mouse based games.
 
 You have 5 fingers, and are moving only 2.
 
-What about your other 5 fingers?
+What about your other 5 fingers, from the other hand?
 
 Try to click with 5 fingers, 1 at a time,
 
@@ -19,8 +19,8 @@ cyclically, any mouse button.
 
 		Change Hands.
 
-Exercise normal clicks, butterfly clicks, jitter click,
-drag click, tap click, etc.
+Exercise both hands, normal clicks, butterfly clicks, jitter clicks,
+drag clicks, tap clicks, etc. Awesome new techiques.
 
 I would only advise you to use normal & butterfly clicks,
 others are stressful towards your hands.
@@ -35,86 +35,32 @@ Try to keep CPS count near 0.
 #make
 
 ```
-0. install any linux os
+0. install openFrameworks, versions 0.7+ should be able to run this addon 
+in any supported openFrameworks platform.
 
-1. download of 1.0.0, extract zip files
+1. download openFrameworks, follow their install instructions, should work. 
+(ask/search the forum if it doesn't?)
 
-2. cd  of/scripts/linux/*
+2. copy this addon and example app/code to OFROOT/addons/ofxCPS
 
-3. read/analyse instructions in files 'install_dependencies.sh', 'install_codexs.sh'
+3. use project generator to generate project files for your favourite IDE.
 
-4. read files, if instructions are ok, the run (careful):
+4. open the project, compile, program should be running. 
+report issues if it's not.
 
-	- sudo ./install_dependencies.sh
+5. click the window as fast as you can to check your CPS count.
 
-	- sudo ./install_codexs.sh  ( You don't need this codexs )
+6. I try to keep ClicksPerSecond count near 0. You can check your performance. 
+It's very hard to go above 11 clicks per second, at least for me. 
+I'd enjoy to see how many clicks you can make. 
+Please send a screenshot or something if you want to see your performance.
+There is an issues page under this repository, you can use it as you'd like.
 
-5. go take a walk or something
-
-6. if there were errors, when you have the shell back at your command:
-look at the first error only. if you can't look at the 1st error due
-to extreme error verbosity and exceeds your terminal line memory, then
-try ( make 2>&1 | grep error | less). with this instruction, you can
-use cursor keys to navigate the full output or the errors and you'll
-be able to see error 0.
-
-7. if there are errors, repeat ad eternum 5, 6, until you
-bypass this loop / step.
-
-8. once you have oflib compiled, you can then proceed to compiling this program.
-
-	cd /of/addons/ofxCPS, type make, then make run.
-
-9. program should be running. report issues if it's not.
-
-10. click the window as fast as you can to check your CPS count.
-Remember to keep it near 0.
-Remember to keep it near 0.
-Remember to keep it near 0.
+7. if you feel frames per second of program too demanding on cpus, 
+you can lower/increase it, visuals run on a different thread from keys, 
+i guess any fps you decide should work?  
 
 ```
-
-
-#making-of
-
-```
-
-mkdir addons/ofxCPS/
-
-cd addons/ofxCPS/
-
-touch readme.md
-
-mkdir src
-
-nano src/ofxCPS.h		(or howl/atom src/ofxCPS.h)
-
-		(here is where you type the src code required for the addon)
-
-mkdir ClicksPerSecond
-
-cd ClicksPerSecond/
-
-mkdir src && mkdir bin
-
-nano src/Clicks.h		(or howl/atom src/Clicks.h)
-
-	(here is where you type the src code required for the program)
-
-nano src/main.cpp		(or howl/atom src/main.cpp)
-
-	(here is where you define entry point for the program)
-
-done.
-
-try compile, test, re-test, field experiment
-
-try clicking, you should get the click count along with history previous clicks performance
-
-
-
-```
-
 
 
 #license
